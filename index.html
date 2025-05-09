@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Status do RP2040</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <h1>Status do RP2040</h1>
+        <div id="board-info">
+            <p><strong>Botão A:</strong> <span id="btnA">--</span></p>
+            <p><strong>Botão B:</strong> <span id="btnB">--</span></p>
+            <p><strong>Joystick X:</strong> <span id="joyX">--</span></p>
+            <p><strong>Joystick Y:</strong> <span id="joyY">--</span></p>
+            <p><strong>Temp. Interna:</strong> <span id="temp">--</span></p>
+            <p><strong>Atualizado em:</strong> <span id="timestamp">--</span></p>
+        </div>
+    </div>
+    <div class="card">
+        <h1>Bússola</h1>
+        <div class="compass">
+            <div id="compass-center"></div>
+            <div class="needle" id="needle"></div>
+            <div class="directions" id="compass-directions">
+            </div>
+        </div>
+        <p><strong>Direção:</strong> <span id="direction">--</span></p>
+    </div>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
