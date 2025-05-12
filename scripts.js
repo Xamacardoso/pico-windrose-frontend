@@ -28,7 +28,7 @@ function atualizarInformacoesRecebidas(data) {
     document.getElementById("btnB").textContent = data.btn_b ? "Pressionado" : "Solto";
     document.getElementById("joyX").textContent = data.joystick_x;
     document.getElementById("joyY").textContent = data.joystick_y;
-    document.getElementById("temp").textContent = data.temp + "° C";
+    document.getElementById("temp").textContent = Number(data.temp).toFixed(2) + "° C";
 
     document.getElementById("direction").textContent = direcao;
     document.getElementById("timestamp").textContent = data.timestamp;
@@ -37,14 +37,14 @@ function atualizarInformacoesRecebidas(data) {
 }
 
 function calcularDirecao(x, y) {
-    if (x > 66 && y > 66) return "Sudeste";
-    if (x > 66 && y < 33) return "Nordeste";
-    if (x < 33 && y > 66) return "Sudoeste";
-    if (x < 33 && y < 33) return "Noroeste";
+    if (x > 66 && y > 66) return "Nordeste";
+    if (x > 66 && y < 33) return "Sudeste";
+    if (x < 33 && y > 66) return "Noroeste";
+    if (x < 33 && y < 33) return "Sudoeste";
     if (x > 66) return "Leste";
     if (x < 33) return "Oeste";
-    if (y > 66) return "Sul";
-    if (y < 33) return "Norte";
+    if (y > 66) return "Norte";
+    if (y < 33) return "Sul";
     return "Centro";
 }
 
