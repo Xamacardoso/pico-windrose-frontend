@@ -1,4 +1,4 @@
-const socket = io("https://pico-windrose-backend.onrender.com");
+const socket = io("https://flask-websocket-api-production.up.railway.app/");
 
 const direcoes = {
     "Norte": 0,
